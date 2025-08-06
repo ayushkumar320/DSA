@@ -3,3 +3,6 @@
 
 # Ignore all executable files in any subdirectory
 **/*.exe
+
+**/*.vscode
+*.vscode
