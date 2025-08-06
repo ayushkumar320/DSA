@@ -4,5 +4,6 @@
 # Ignore all executable files in any subdirectory
 **/*.exe
 
-**/*.vscode
-*.vscode
+# Ignore VS Code settings folder
+.vscode/
+**/.vscode/
