@@ -6,7 +6,7 @@ class Rectangle {
     int length;
     int breadth;
   public: 
-    Rectangle(int l, int b){
+    Rectangle(int l, int b){     // This is a constructor
       length = l;
       breadth = b;
     }
