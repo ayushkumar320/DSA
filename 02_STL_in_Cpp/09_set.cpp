@@ -2,9 +2,11 @@
 using namespace std;
 
 void explainSet();
+void explainMultiSet();
 
 int main(){
   explainSet();
+  explainMultiSet();
   return 0;
 }
 
@@ -43,3 +45,40 @@ void explainSet(){
     cout << "Element 2 not found in the set" << endl;
   }
 }
+
+// Multiset - Allows duplicate elements
+void explainMultiSet(){
+  multiset<int> ms;
+  ms.insert(1);
+  ms.insert(3);
+  ms.insert(2);
+  ms.insert(5);
+  ms.insert(4);
+  ms.insert(2);  // Duplicate element
+
+  cout << "Elements in the multiset: ";
+  for(auto it = ms.begin(); it != ms.end(); ++it){
+    cout << *it << " ";
+  }
+  cout << endl;
+
+  ms.erase(2);  // Removes all occurrence of 2
+  cout << "Elements in the multiset after erasing 2: ";
+  for(auto it = ms.begin(); it != ms.end(); ++it){
+    cout << *it << " ";
+  }
+  cout << endl;
+
+  if(ms.empty()){
+    cout << "Multiset is empty" << endl;
+  } else {
+    cout << "Multiset is not empty" << endl;
+  }
+
+  auto it = ms.find(2);
+  if(it != ms.end()){
+    cout << "Element 2 found in the multiset" << endl;
+  } else {
+    cout << "Element 2 not found in the multiset" << endl;
+  }
+} 
