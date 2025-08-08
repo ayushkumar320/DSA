@@ -36,7 +36,7 @@ void explainSet(){
     cout << "Set is not empty" << endl;
   }
 
-  auto it = s.find(2);
+  auto it = s.find(2);   // returns and iterator which points to 2 (address of 2 in set)
   if(it != s.end()){
     cout << "Element 2 found in the set" << endl;
   } else {
