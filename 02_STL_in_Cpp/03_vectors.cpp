@@ -94,5 +94,39 @@ void explainVector(){
 
 
   // Erasing a vector
-  
+  v5.erase(v5.begin()+1);  // This erases the second element of the vector
+
+  v5.erase(v5.begin()+2, v5.begin()+4);  // This erases the third and fourth elements [start, end)
+
+  // v5.clear();  // This erases all elements of the vector
+
+  // Insert function
+
+  vector<int>v6(2, 100); // {100, 100}
+  v6.insert(v6.begin(), 300); // {300, 100, 100}
+  v6.insert(v6.begin()+1, 2, 400); // {300, 400, 400, 100, 100}
+
+  // Inserting a vector to a vector
+  vector<int> copy(2, 50);
+  v6.insert(v6.begin(), copy.begin(), copy.end()); // {50, 50, 300, 400, 400, 100, 100}
+
+  // Size 
+  cout << v6.size() << endl;  // Returns the number of elements in the vector
+
+  // Pop back
+  v6.pop_back();  // This erases the last element of the vector 
+
+  // Swapping two vectors
+  vector<int> v7 = {1, 2, 3};
+  vector<int> v8 = {4, 5, 6};
+  swap(v7, v8);
+  for (auto it : v7) {
+    cout << it << " ";
+  }
+  cout << endl;
+  for (auto it : v8) {
+    cout << it << " ";
+  }
+  cout << endl;
+
 }
